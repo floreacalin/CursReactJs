@@ -1,6 +1,6 @@
 import Expenses from "./components/Expenses/Expenses";
-
 import NewExpense from "./components/NewExpense/NewExpense";
+import { InputText } from "primereact/inputtext";
 
 const App = () => {
   const expenses = [
@@ -30,6 +30,10 @@ const App = () => {
   };
   return (
     <div>
+      <span className="p-float-label">
+        <InputText id="in" />
+        <label htmlFor="in">Username</label>
+      </span>
       <NewExpense onAddExpense={addExpenseHandler} />
       <Expenses items={expenses} />
     </div>
